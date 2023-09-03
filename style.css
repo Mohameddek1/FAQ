@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    box-sizing: border-box;   
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(211, 211, 211);
+}
+h1{
+    text-align: center;
+}
+
+.faq-container{
+    margin: 0 auto;
+    /* background: transparent; */
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1); */
+}
+.faq{
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin: 20px auto;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;    
+    overflow: hidden;
+    transition: 0.3s;
+}
+.faq .faq-title{
+    margin: 15px 20px;
+    padding: 15px 20px;
+}
+.faq .faq-text{
+    display: none;
+    margin: 15px 20px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.faq .faq-toggle{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+
+}
+.faq .faq-toggle .fa-chevron-down{
+    display: block;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.faq .faq-toggle .fa-x{
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.faq.active {
+    box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+}
+.faq.active .faq-text{
+    display: block;
+}
+.faq.active .faq-toggle .fa-x{
+    display: block;
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+}
+.faq.active .faq-toggle .fa-chevron-down{
+    display: none;
+}
+.faq.active .faq-text{
+    display: block;
+}
